@@ -50,7 +50,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build -- --prod
+          ng build --configuration production
       - name: Lint
         run: |
           npm run lint
