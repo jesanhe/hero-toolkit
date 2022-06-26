@@ -46,17 +46,17 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: |
-          npm ci --legacy-peer-deps
+          npm ci
 
       - name: Build
         run: |
           npm run build:pro
-      - name: Lint
-        run: |
-          npm run lint
-      # - name: Test
+      # - name: Lint
       #   run: |
-      #     npm run test --
+      #     npm run lint
+      # # - name: Test
+      # #   run: |
+      # #     npm run test --
 
       - name: Conventional Changelog Action
         id: changelog
